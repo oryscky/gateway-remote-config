@@ -1,1 +1,53 @@
 
+{
+ "SX1301_conf": {
+ "lorawan_public": true,
+ "clksrc": 1, /* radio_1 provides clock to concentrator */
+ "radio_0": {
+ "enable": true,
+ "type": "SX1257",
+ "freq": 867500000,
+ "rssi_offset": -166.0,
+ "tx_enable": true
+ },
+ "radio_1": {
+ "enable": true,
+   "type": "SX1257",
+ "freq": 868500000,
+ "rssi_offset": -166.0,
+ "tx_enable": false
+ },
+ "chan_multiSF_0": {
+ /* Lora MAC channel, 125kHz, all SF, 868.1 MHz */
+ "enable": true,
+ "radio": 1,
+ "if": -400000
+ },
+ "chan_multiSF_1": {
+ /* Lora MAC channel, 125kHz, all SF, 868.3 MHz */
+ "enable": true,
+ "radio": 1,
+ "if": -200000
+ },
+…
+ "tx_lut_0": {
+ /* TX gain table, index 0 */
+"pa_gain": 0,
+ "mix_gain": 8,
+ "rf_power": -6,
+ "dig_gain": 0
+ },
+…
+ },
+ "tx_lut_15": {
+ /* TX gain table, index 15 */
+ "pa_gain": 3,
+ "mix_gain": 14,
+ "rf_power": 27,
+ "dig_gain": 0
+ }
+ },
+ "gateway_conf": {
+ "gateway_ID": "AA555A0000000000"
+ }
+}
